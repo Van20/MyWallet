@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryTrans">#C615B4F1</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="dot_inactive">#3315B4F1</color>
+    <color name="textHeading">#5F5F5F</color>
+    <color name="textParagraph">#414141</color>
+
+    <color name="backname">#c2baac</color>
+    <color name="backview">#FFEFBA3E</color>
+
+</resources>
