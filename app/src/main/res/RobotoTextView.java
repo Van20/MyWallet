@@ -1,4 +1,4 @@
-package id.sch.smktelkom_mlg.mywallet.splash_screen;
+
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import id.sch.smktelkom_mlg.mywallet.R;
+import id.sch.smktelkom_mlg.wiki_lantas.R;
 
 public class RobotoTextView extends TextView {
 

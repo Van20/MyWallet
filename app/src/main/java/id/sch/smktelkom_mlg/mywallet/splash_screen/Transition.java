@@ -52,7 +52,7 @@ public class Transition {
 
     public Transition(RectF srcRect, RectF dstRect, long duration, Interpolator interpolator) {
         if (!MathUtils.haveSameAspectRatio(srcRect, dstRect)) {
-            throw new id.sch.smktelkom_mlg.splashvideo.IncompatibleRatioException();
+            throw new id.sch.smktelkom_mlg.mywallet.splash_screen.IncompatibleRatioException();
         }
         mSrcRect = srcRect;
         mDstRect = dstRect;

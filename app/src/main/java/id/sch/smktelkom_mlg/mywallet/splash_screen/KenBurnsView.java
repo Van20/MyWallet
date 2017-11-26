@@ -1,9 +1,5 @@
 package id.sch.smktelkom_mlg.mywallet.splash_screen;
 
-
-/**
- * Created by Karthik's on 27-02-2016.
- */
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,7 +7,7 @@ import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.transition.Transition;
+import android.support.transition.Transition;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -39,7 +35,7 @@ public class KenBurnsView extends ImageView {
     private TransitionListener mTransitionListener;
 
     /** The ongoing transition. */
-    private Transition mCurrentTrans;
+    private id.sch.smktelkom_mlg.mywallet.splash_screen.Transition mCurrentTrans;
 
     /** The rect that holds the bounds of this view. */
     private final RectF mViewportRect = new RectF();
@@ -238,7 +234,7 @@ of the current rect into the entire view. */
      * Fires a start event on {@link #mTransitionListener};
      * @param transition the transition that just started.
      */
-    private void fireTransitionStart(Transition transition) {
+    private void fireTransitionStart(id.sch.smktelkom_mlg.mywallet.splash_screen.Transition transition) {
         if (mTransitionListener != null && transition != null) {
             mTransitionListener.onTransitionStart(transition);
         }
@@ -249,7 +245,7 @@ of the current rect into the entire view. */
      * Fires an end event on {@link #mTransitionListener};
      * @param transition the transition that just ended.
      */
-    private void fireTransitionEnd(Transition transition) {
+    private void fireTransitionEnd(id.sch.smktelkom_mlg.mywallet.splash_screen.Transition transition) {
         if (mTransitionListener != null && transition != null) {
             mTransitionListener.onTransitionEnd(transition);
         }
@@ -341,12 +337,12 @@ don't start it if this view size is still unknown. */
          * Notifies the start of a transition.
          * @param transition the transition that just started.
          */
-        public void onTransitionStart(Transition transition);
+        public void onTransitionStart(id.sch.smktelkom_mlg.mywallet.splash_screen.Transition transition);
 
         /**
          * Notifies the end of a transition.
          * @param transition the transition that just ended.
          */
-        public void onTransitionEnd(Transition transition);
+        public void onTransitionEnd(id.sch.smktelkom_mlg.mywallet.splash_screen.Transition transition);
     }
 }
