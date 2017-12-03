@@ -16,7 +16,7 @@ import id.sch.smktelkom_mlg.mywallet.R;
 public class Splash_activity extends Activity {
 
     // Splash screen timer
-    private static int SPLASH_TIME_OUT = 14000;
+    private static int SPLASH_TIME_OUT = 20000;
     private KenBurnsView mKenBurns;
 
     @Override
