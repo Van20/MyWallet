@@ -1,8 +1,58 @@
 <resources>
-    <string name="app_name">My Wallet</string>
+    <string name="app_name"></string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="setingupwelcome">Berapa uang anda hari ini?</string>
+
+    <string name="action_reset">Reset</string>
+    <string name="todayexpense">Pengeluaran Hari Ini : </string>
+    <string name="availablemoney">Sisa Uang Saat Ini</string>
+
+    <string name="aboutheader">Uangku &#169; 2017</string>
+    <string name="abouttext">Aplikasi ini berguna untuk membatu mengontrol dan mengatur pengeluaran. </string>
+    <string name="aboutfooter">Regard : Fian</string>
+
+    <string name="sharebody">Check it out. Aplikasi Untuk Mengontrol Keuanganmu, More : https://goo.gl/qGlNIq </string>
+    <string name="sharedialog">Share Via ... </string>
+    <string name="sharesubject">Uangku Share</string>
+
+    <string name="settingupmessagesucces">Saldo awal telah ditambahkan. Mulailah mengontrol pengeluaranmu sekarang</string>
+
+    <string name="nocategory">Belum Ada Kategori</string>
+    <string name="noexpense">Belum Ada Pengeluaran</string>
+
+    <string-array name="dialog_kategori">
+        <item>Rubah Kategori</item>
+        <item>Hapus Kategori</item>
+    </string-array>
+
+    <string-array name="dialog_backup">
+        <item>Backup Data Saya</item>
+        <item>Restore Data Saya</item>
+    </string-array>
+
+    <string-array name="dialog_expense">
+        <item>Rubah Pengeluaran</item>
+        <item>Hapus Pengeluaran</item>
+    </string-array>
+
+    <string-array name="Bulan">
+        <item>Januari</item>
+        <item>February</item>
+        <item>Maret</item>
+        <item>April</item>
+        <item>Mei</item>
+        <item>Juni</item>
+        <item>Juli</item>
+        <item>Agustus</item>
+        <item>September</item>
+        <item>Oktober</item>
+        <item>November</item>
+        <item>Desember</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+
 </resources>

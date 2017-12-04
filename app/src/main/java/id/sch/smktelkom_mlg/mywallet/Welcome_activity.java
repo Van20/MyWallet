@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import id.sch.smktelkom_mlg.mywallet.Model.Saldo;
+import id.sch.smktelkom_mlg.mywallet.login_screen.Login_activity;
 import id.sch.smktelkom_mlg.mywallet.splash_screen.Splash_activity;
 
 public class Welcome_activity extends AppCompatActivity {
@@ -109,7 +111,7 @@ public class Welcome_activity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(Welcome_activity.this, Splash_activity.class));
+        startActivity(new Intent(Welcome_activity.this, Saldo.class));
         finish();
     }
 

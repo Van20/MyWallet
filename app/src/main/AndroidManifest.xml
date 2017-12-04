@@ -9,21 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Welcome_activity" />
-        <activity android:name=".splash_screen.Splash_activity"></activity>
-        <activity android:name=".splash_screen.abc" />
-        <activity android:name=".login_screen.Login_activity"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            android:theme="@style/AppCompatTheme"
-            android:screenOrientation="portrait">
+        <activity android:name=".Welcome_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".splash_screen.Splash_activity" />
+        <activity android:name=".splash_screen.abc" />
+        <activity
+            android:name=".login_screen.Login_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+
+        </activity>
         <activity android:name=".beranda_screen.MainActivity" />
-        <activity android:name=".registrasi_screen.Registrasi_activity"></activity>
+        <activity android:name=".registrasi_screen.Registrasi_activity" />
+        <activity android:name=".saldo_screen.SetSaldo_activity" />
+        <activity android:name=".DetailReport"></activity>
     </application>
 
 </manifest>
