@@ -25,20 +25,17 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-import io.github.fianekame.uangku.Controller.CategoryController;
-import io.github.fianekame.uangku.Controller.ExpenseController;
-import io.github.fianekame.uangku.Controller.SaldoController;
-import io.github.fianekame.uangku.MainActivity;
-import io.github.fianekame.uangku.Model.Category;
-import io.github.fianekame.uangku.Model.Expense;
-import io.github.fianekame.uangku.Model.Saldo;
-import io.github.fianekame.uangku.R;
-import io.github.fianekame.uangku.Utils.DatePicker;
-import io.github.fianekame.uangku.Utils.Utils;
+import id.sch.smktelkom_mlg.mywallet.Controller.CategoryController;
+import id.sch.smktelkom_mlg.mywallet.Controller.ExpenseController;
+import id.sch.smktelkom_mlg.mywallet.Controller.SaldoController;
+import id.sch.smktelkom_mlg.mywallet.Model.Category;
+import id.sch.smktelkom_mlg.mywallet.Model.Expense;
+import id.sch.smktelkom_mlg.mywallet.Model.Saldo;
+import id.sch.smktelkom_mlg.mywallet.R;
+import id.sch.smktelkom_mlg.mywallet.Utils.DatePicker;
+import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
 
-/**
- * Created by fianxeka on 18/06/17.
- */
 
 public class FragmentHome extends Fragment {
 

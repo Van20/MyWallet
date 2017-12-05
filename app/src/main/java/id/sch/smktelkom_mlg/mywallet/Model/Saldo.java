@@ -1,8 +1,5 @@
 package id.sch.smktelkom_mlg.mywallet.Model;
 
-/**
- * Created by fianxeka on 19/06/17.
- */
 
 public class Saldo {
 

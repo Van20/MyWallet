@@ -21,19 +21,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import io.github.fianekame.uangku.Controller.CategoryController;
-import io.github.fianekame.uangku.Controller.ExpenseController;
-import io.github.fianekame.uangku.Controller.ReportController;
-import io.github.fianekame.uangku.MainActivity;
-import io.github.fianekame.uangku.Model.Category;
-import io.github.fianekame.uangku.Model.Expense;
-import io.github.fianekame.uangku.R;
-import io.github.fianekame.uangku.Utils.DatePicker;
-import io.github.fianekame.uangku.Utils.Utils;
-
-/**
- * Created by fianxeka on 29/06/17.
- */
+import id.sch.smktelkom_mlg.mywallet.Controller.CategoryController;
+import id.sch.smktelkom_mlg.mywallet.Controller.ExpenseController;
+import id.sch.smktelkom_mlg.mywallet.Controller.ReportController;
+import id.sch.smktelkom_mlg.mywallet.Model.Category;
+import id.sch.smktelkom_mlg.mywallet.Model.Expense;
+import id.sch.smktelkom_mlg.mywallet.R;
+import id.sch.smktelkom_mlg.mywallet.Utils.DatePicker;
+import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
 
 public class FragmentDailyReport extends Fragment {
 

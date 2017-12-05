@@ -122,7 +122,7 @@ public class Registrasi_activity extends AppCompatActivity {
                             progressDialog.dismiss();
                             password.setText(sPassword);
                             nombre.setText(sNombre);
-                            String mesg = String.format("El correo electrónico que has introducido ya se encuentra registrado", null);
+                            String mesg = String.format("Initializing", null);
                             Toast.makeText(getApplicationContext(),mesg, Toast.LENGTH_LONG).show();
                         }else {
                             managerUsuario.insertar_parametros(null, sEmail, sPassword, bytes, sNombre);
@@ -146,21 +146,21 @@ public class Registrasi_activity extends AppCompatActivity {
         String sEmail = email.getText().toString();
 
         if (sNombre.isEmpty() || sNombre.length() < 3) {
-            nombre.setError("Ingrese al menos 3 caracteres");
+            nombre.setError("Username minimal 3 huruf");
             valid = false;
         } else {
             nombre.setError(null);
         }
 
         if (sEmail.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(sEmail).matches()) {
-            email.setError("Dirección de correo electrónico no válida");
+            email.setError("E-mail tidak valid");
             valid = false;
         } else {
             email.setError(null);
         }
 
         if (sPassword.isEmpty() || password.length() < 4 || password.length() > 10) {
-            password.setError("Ingrese entre 4 a 10 caracteres alfanuméricos");
+            password.setError("Password harus diisi 4 sampai 10 digit");
             valid = false;
         } else {
             password.setError(null);

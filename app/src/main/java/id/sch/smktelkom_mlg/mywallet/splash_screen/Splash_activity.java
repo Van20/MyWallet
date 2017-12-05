@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import id.sch.smktelkom_mlg.mywallet.R;
+import id.sch.smktelkom_mlg.mywallet.login_screen.Login_activity;
 
 public class Splash_activity extends Activity {
 
@@ -34,7 +35,7 @@ public class Splash_activity extends Activity {
 
             @Override
             public void run() {
-                Intent i = new Intent(Splash_activity.this, abc.class);
+                Intent i = new Intent(Splash_activity.this, Login_activity.class);
                 startActivity(i);
 
                 finish();

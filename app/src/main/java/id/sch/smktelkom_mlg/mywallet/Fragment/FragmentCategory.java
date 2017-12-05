@@ -20,15 +20,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import io.github.fianekame.uangku.Controller.CategoryController;
-import io.github.fianekame.uangku.Controller.ExpenseController;
-import io.github.fianekame.uangku.MainActivity;
-import io.github.fianekame.uangku.Model.Category;
-import io.github.fianekame.uangku.R;
-
-/**
- * Created by fianxeka on 29/06/17.
- */
+import id.sch.smktelkom_mlg.mywallet.Controller.CategoryController;
+import id.sch.smktelkom_mlg.mywallet.Controller.ExpenseController;
+import id.sch.smktelkom_mlg.mywallet.Model.Category;
+import id.sch.smktelkom_mlg.mywallet.R;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
 
 public class FragmentCategory extends Fragment {
 

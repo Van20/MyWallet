@@ -33,7 +33,7 @@
             android:layout_marginBottom="8dp"
             android:id="@+id/nombre_registro"
             android:inputType="textCapWords|textPersonName"
-            android:hint="Nombre"/>
+            android:hint="Username"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="REGRISTRAR"
+            android:text="REGISTRASI"
             android:id="@+id/btn_registro_usuario"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"
@@ -66,7 +66,7 @@
         <TextView android:id="@+id/link_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ya eres mienbro? Ingresa"
+            android:text="Sudah punya akun? Masuk sekarang!"
             android:gravity="center"
             android:textSize="16dip"/>
 

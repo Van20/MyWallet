@@ -1,33 +1,25 @@
 package id.sch.smktelkom_mlg.mywallet.beranda_screen;
 
-
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.support.v7.app.AlertDialog;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import id.sch.smktelkom_mlg.mywallet.Controller.SaldoController;
@@ -38,15 +30,10 @@ import id.sch.smktelkom_mlg.mywallet.Fragment.FragmentMonthlyReport;
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.Utils.SPManager;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
-import id.sch.smktelkom_mlg.mywallet.database.DatabaseManagerUser;
-import id.sch.smktelkom_mlg.mywallet.entity.User;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DatabaseManagerUser databaseManagerUser;
-    private User itemUsuario;
-    private String ident;
     Toolbar toolbar;
     DrawerLayout drawer;
     NavigationView navigationView;
@@ -56,7 +43,6 @@ public class MainActivity extends AppCompatActivity
     SPManager prefManager;
     FloatingActionButton fabBtn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +51,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         prefManager = new SPManager(this);
+
         fabBtn = (FloatingActionButton) findViewById(R.id.fab);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -77,6 +64,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         fragmentManager = getFragmentManager();
+
         if (savedInstanceState == null) {
             fragment = new FragmentHome();
             callFragment(fragment);
@@ -88,56 +76,11 @@ public class MainActivity extends AppCompatActivity
      */
     public void showFloatingActionButton() {
         fabBtn.show();
-    }
-    ;
+    };
+
     public void hideFloatingActionButton() {
         fabBtn.hide();
-    }
-    ;
-
-    {
-        //se agrego codigo del 39 al 68
-        Bundle b = getIntent().getExtras();
-
-        ident = b.getString("IDENT");
-
-        databaseManagerUser= new DatabaseManagerUser(getApplicationContext());
-        itemUsuario = databaseManagerUser.getUsuario(ident); // encuentra al usuario registrado en la bbdd
-
-        View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
-
-        ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(itemUsuario.getNombre());
-        ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
-
-        Bitmap bitmapsinfoto = BitmapFactory.decodeResource(getResources(),R.drawable.imagen);
-        RoundedBitmapDrawable roundedBitmapDrawablesinfoto = RoundedBitmapDrawableFactory.create(getResources(), bitmapsinfoto);
-        roundedBitmapDrawablesinfoto.setCircular(true);
-
-        ((ImageView) header.findViewById(R.id.imageView)).setImageDrawable(roundedBitmapDrawablesinfoto);
-
-        if(itemUsuario.getBytes()!=null){
-            byte[] foodImage = itemUsuario.getBytes();
-            Bitmap bitmap = BitmapFactory.decodeByteArray(foodImage, 0, foodImage.length);
-
-            ((ImageView) header.findViewById(R.id.imageView)).setImageBitmap(bitmap);
-
-            Bitmap bitmap2 = ((BitmapDrawable)((ImageView) header.findViewById(R.id.imageView)).getDrawable()).getBitmap();
-            RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap2);
-            roundedBitmapDrawable.setCircular(true);
-
-            ((ImageView) header.findViewById(R.id.imageView)).setImageDrawable(roundedBitmapDrawable);
-        }
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-    }
+    };
 
     @Override
     public void onBackPressed() {
@@ -145,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            finish();
         }
     }
 
@@ -218,7 +161,6 @@ public class MainActivity extends AppCompatActivity
         alertDialogAndroid.show();
 
     }
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

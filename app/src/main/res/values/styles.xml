@@ -9,7 +9,9 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
         <item name="colorAccent">@color/colorBlanco</item>
         <item name="android:textColorPrimary">@color/iron</item>
@@ -25,6 +27,7 @@
         <item name="android:paddingRight">@dimen/space20</item>
         <item name="android:background">@drawable/btn_blue_selector</item>
     </style>
+
     <style name="ButtonTransparent">
         <item name="android:textSize">@dimen/txt_btn</item>
         <item name="android:textColor">@color/textParagraph</item>
@@ -55,16 +58,23 @@
         <!-- Supports API Level 17+ -->
         <!-- <item name="android:paddingEnd">26dp</item> -->
     </style>
+
     <style name="AppCompatTheme" parent="@style/Theme.AppCompat.Light">
         <item name="android:windowActionBar">false</item>
     </style>
-    <style name="DesignTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
-    <item name="windowNoTitle" >true </item >
-    <item name="windowActionBar" >true </item >
-    <item name="colorPrimary" >@color/colorPrimary </item >
-    <item name="colorPrimaryDark" >@color/colorPrimaryDark </item >
-    <item name="colorAccent" >@color/colorAccent </item >
 
+    <style name="DesignTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

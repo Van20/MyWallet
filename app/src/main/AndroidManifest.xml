@@ -12,22 +12,24 @@
         <activity android:name=".Welcome_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".splash_screen.Splash_activity" />
-        <activity android:name=".splash_screen.abc" />
         <activity
             android:name=".login_screen.Login_activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme"
-            android:windowSoftInputMode="adjustResize|stateHidden">
-
-        </activity>
-        <activity android:name=".beranda_screen.MainActivity" />
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".beranda_screen.MainActivity"></activity>
         <activity android:name=".registrasi_screen.Registrasi_activity" />
         <activity android:name=".saldo_screen.SetSaldo_activity" />
-        <activity android:name=".DetailReport"></activity>
+        <activity android:name=".DetailReport" />
+        <activity
+            android:name=".beranda_screen.Home_activity"
+            android:label="@string/title_activity_home_activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
