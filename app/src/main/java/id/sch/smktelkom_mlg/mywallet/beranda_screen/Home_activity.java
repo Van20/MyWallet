@@ -39,6 +39,8 @@ import id.sch.smktelkom_mlg.mywallet.Utils.SPManager;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
 import id.sch.smktelkom_mlg.mywallet.database.DatabaseManagerUser;
 import id.sch.smktelkom_mlg.mywallet.entity.User;
+import id.sch.smktelkom_mlg.mywallet.registrasi_screen.Registrasi_activity;
+import id.sch.smktelkom_mlg.mywallet.saldo_screen.SetSaldo_activity;
 
 public class Home_activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -173,6 +175,8 @@ public class Home_activity extends AppCompatActivity implements NavigationView.O
         if (id == R.id.action_reset1) {
             prefManager.setFirstTimeLaunch(true);
             getApplicationContext().deleteDatabase("uangku");
+            Intent intent =new Intent(getApplicationContext(),SetSaldo_activity.class);
+            startActivity(intent);
             finish();
             return true;
         }
@@ -192,6 +196,7 @@ public class Home_activity extends AppCompatActivity implements NavigationView.O
     /**
      * Change Saldo Dialog
      */
+
     private void showSaldoDialog() {
         final SaldoController saldoKontrol = new SaldoController(this);
         LayoutInflater layoutInflaterAndroid = LayoutInflater.from(this);

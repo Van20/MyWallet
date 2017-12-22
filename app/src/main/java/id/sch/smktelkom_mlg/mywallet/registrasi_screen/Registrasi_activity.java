@@ -20,10 +20,16 @@ import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 
+import id.sch.smktelkom_mlg.mywallet.Controller.SaldoController;
+import id.sch.smktelkom_mlg.mywallet.Model.Saldo;
+import id.sch.smktelkom_mlg.mywallet.PrefManager;
 import id.sch.smktelkom_mlg.mywallet.R;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.Utils.SPManager;
+import id.sch.smktelkom_mlg.mywallet.Welcome_activity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 import id.sch.smktelkom_mlg.mywallet.database.DatabaseManagerUser;
 import id.sch.smktelkom_mlg.mywallet.login_screen.Login_activity;
+import id.sch.smktelkom_mlg.mywallet.saldo_screen.SetSaldo_activity;
 
 public class Registrasi_activity extends AppCompatActivity {
 
@@ -39,11 +45,16 @@ public class Registrasi_activity extends AppCompatActivity {
     private Bitmap bitmap_foto;
     private RoundedBitmapDrawable roundedBitmapDrawable;
     private byte[] bytes;
+    SPManager prefManager;
+    SetSaldo_activity registrasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+
+        prefManager = new SPManager(this);
         setContentView(R.layout.activity_registrasi);
+        registrasi = new SetSaldo_activity();
 
         imageView = (ImageView) findViewById(R.id.usuario_imagen_registro);
         loginLink = (TextView)findViewById(R.id.link_login);
@@ -62,6 +73,17 @@ public class Registrasi_activity extends AppCompatActivity {
                 registrar();
             }
         });
+
+        if (prefManager.isFirstTimeLaunch()) {
+            startActivity(this.getIntent());
+            finish();
+        }
+        else {
+            Intent i = new Intent(Registrasi_activity.this, Login_activity.class);
+            startActivity(i);
+            finish();
+            }
+
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,17 +104,26 @@ public class Registrasi_activity extends AppCompatActivity {
             }
         });
 
+
         loginLink.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(),Login_activity.class);
-                startActivity(intent);
+                prefManager.setFirstTimeLaunch(false);
+                startActivity(new Intent(Registrasi_activity.this, Login_activity.class));
                 finish();
+
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
+    }
+
+    public void launchHomeScreen() {
+        prefManager.setFirstTimeLaunch(false);
+        Intent i = new Intent(Registrasi_activity.this, Login_activity.class);
+        startActivity(i);
+        finish();
     }
 
     public void registrar(){
@@ -106,7 +137,7 @@ public class Registrasi_activity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(Registrasi_activity.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Creando cuenta...");
+        progressDialog.setMessage("Initializing..");
         progressDialog.show();
 
         managerUsuario = new DatabaseManagerUser(this);
@@ -126,9 +157,9 @@ public class Registrasi_activity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),mesg, Toast.LENGTH_LONG).show();
                         }else {
                             managerUsuario.insertar_parametros(null, sEmail, sPassword, bytes, sNombre);
-                            String mesg = String.format("%s ha sido guardado en la BBDD", sNombre);
+                            String mesg = String.format("Registrasi akun berhasil..", sNombre);
                             Toast.makeText(getBaseContext(),mesg, Toast.LENGTH_LONG).show();
-                            Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                            Intent intent =new Intent(getApplicationContext(),Login_activity.class);
                             intent.putExtra("IDENT",sEmail);
                             startActivity(intent);
                             finish();

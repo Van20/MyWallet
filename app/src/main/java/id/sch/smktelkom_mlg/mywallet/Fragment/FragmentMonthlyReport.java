@@ -42,7 +42,7 @@ import id.sch.smktelkom_mlg.mywallet.DetailReport;
 import id.sch.smktelkom_mlg.mywallet.Model.Report;
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 
 
 public class FragmentMonthlyReport extends Fragment {
@@ -81,7 +81,7 @@ public class FragmentMonthlyReport extends Fragment {
                              Bundle savedInstanceState) {
         view = (RelativeLayout) inflater.inflate(R.layout.fragment_monthly_report, container, false);
         getActivity().setTitle("Laporan Bulanan");
-        ((MainActivity) getActivity()).hideFloatingActionButton();
+        ((Home_activity) getActivity()).hideFloatingActionButton();
         expense = new ExpenseController(getActivity());
         report = new ReportController(getActivity());
 

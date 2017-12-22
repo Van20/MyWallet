@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
 import id.sch.smktelkom_mlg.mywallet.database.DatabaseManagerUser;
 import id.sch.smktelkom_mlg.mywallet.registrasi_screen.Registrasi_activity;
 
@@ -95,7 +94,6 @@ public class Login_activity extends AppCompatActivity {
                         }
                     }
                 }, 3000);
-
     }
 
     private boolean validar() {

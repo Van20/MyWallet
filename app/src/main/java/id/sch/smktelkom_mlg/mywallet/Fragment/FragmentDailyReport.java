@@ -29,7 +29,7 @@ import id.sch.smktelkom_mlg.mywallet.Model.Expense;
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.Utils.DatePicker;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 
 public class FragmentDailyReport extends Fragment {
 
@@ -60,7 +60,7 @@ public class FragmentDailyReport extends Fragment {
                              Bundle savedInstanceState) {
         view = (RelativeLayout) inflater.inflate(R.layout.fragment_daily_report, container, false);
         getActivity().setTitle("Laporan Harian");
-        ((MainActivity) getActivity()).hideFloatingActionButton();
+        ((Home_activity) getActivity()).hideFloatingActionButton();
         category = new CategoryController(getActivity());
         expense = new ExpenseController(getActivity());
         report = new ReportController(getActivity());

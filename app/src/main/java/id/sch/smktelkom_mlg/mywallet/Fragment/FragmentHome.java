@@ -34,7 +34,7 @@ import id.sch.smktelkom_mlg.mywallet.Model.Saldo;
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.Utils.DatePicker;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 
 
 public class FragmentHome extends Fragment {
@@ -73,7 +73,7 @@ public class FragmentHome extends Fragment {
                              Bundle savedInstanceState) {
         view = (RelativeLayout) inflater.inflate(R.layout.fragment_home, container, false);
         getActivity().setTitle("Uangku");
-        ((MainActivity) getActivity()).showFloatingActionButton();
+        ((Home_activity) getActivity()).showFloatingActionButton();
 
         category = new CategoryController(getActivity());
         expense = new ExpenseController(getActivity());
@@ -118,7 +118,7 @@ public class FragmentHome extends Fragment {
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) getActivity().findViewById(R.id.fab1);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

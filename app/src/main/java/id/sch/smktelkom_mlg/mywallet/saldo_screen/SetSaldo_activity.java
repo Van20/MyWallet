@@ -1,5 +1,4 @@
 package id.sch.smktelkom_mlg.mywallet.saldo_screen;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,8 +15,9 @@ import id.sch.smktelkom_mlg.mywallet.Model.Saldo;
 import id.sch.smktelkom_mlg.mywallet.R;
 import id.sch.smktelkom_mlg.mywallet.Utils.SPManager;
 import id.sch.smktelkom_mlg.mywallet.Utils.Utils;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 import id.sch.smktelkom_mlg.mywallet.login_screen.Login_activity;
+import id.sch.smktelkom_mlg.mywallet.registrasi_screen.Registrasi_activity;
 
 public class SetSaldo_activity extends Activity {
 
@@ -44,12 +44,15 @@ public class SetSaldo_activity extends Activity {
 
     }
 
+
     public void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        Intent i = new Intent(SetSaldo_activity.this, Login_activity.class);
+        Intent i = new Intent(SetSaldo_activity.this, Registrasi_activity.class);
         startActivity(i);
         finish();
     }
+
+
 
     public void restoreData(View view) {
         Toast.makeText(this, Utils.doRestore(), Toast.LENGTH_LONG).show();

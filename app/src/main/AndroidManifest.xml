@@ -22,9 +22,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".beranda_screen.MainActivity"></activity>
         <activity android:name=".registrasi_screen.Registrasi_activity" />
-        <activity android:name=".saldo_screen.SetSaldo_activity" />
+        <activity android:name=".saldo_screen.SetSaldo_activity" >
+
+        </activity>
         <activity android:name=".DetailReport" />
         <activity
             android:name=".beranda_screen.Home_activity"

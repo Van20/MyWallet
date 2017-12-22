@@ -24,7 +24,7 @@ import id.sch.smktelkom_mlg.mywallet.Controller.CategoryController;
 import id.sch.smktelkom_mlg.mywallet.Controller.ExpenseController;
 import id.sch.smktelkom_mlg.mywallet.Model.Category;
 import id.sch.smktelkom_mlg.mywallet.R;
-import id.sch.smktelkom_mlg.mywallet.beranda_screen.MainActivity;
+import id.sch.smktelkom_mlg.mywallet.beranda_screen.Home_activity;
 
 public class FragmentCategory extends Fragment {
 
@@ -51,7 +51,7 @@ public class FragmentCategory extends Fragment {
 
         view = (RelativeLayout) inflater.inflate(R.layout.fragment_category, container, false);
         getActivity().setTitle("Kategori");
-        ((MainActivity) getActivity()).hideFloatingActionButton();
+        ((Home_activity) getActivity()).hideFloatingActionButton();
 
         category = new CategoryController(getActivity());
         expense = new ExpenseController(getActivity());

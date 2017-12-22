@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">MyWallet</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,7 +13,7 @@
 
     <string name="aboutheader">Uangku &#169; 2017</string>
     <string name="abouttext">Aplikasi ini berguna untuk membatu mengontrol dan mengatur pengeluaran. </string>
-    <string name="aboutfooter">Regard : Fian</string>
+    <string name="aboutfooter">Regard : Kelompok 2 - Kerja Proyek</string>
 
     <string name="sharebody">Check it out. Aplikasi Untuk Mengontrol Keuanganmu, More : https://goo.gl/qGlNIq </string>
     <string name="sharedialog">Share Via ... </string>
